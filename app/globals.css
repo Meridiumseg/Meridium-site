@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0a1110;
+  --navy: #0e2733;
+  --petrol: #163f45;
+  --olive: #3b4a34;
+  --olive-deep: #1c2818;
+  --beige: #d9cdb3;
+  --graphite: #2a2e31;
+  --ice: #f3f5f0;
+  --bg: #0a1110;
+  --bg-2: #0f1c1e;
+  --fg: #f3f5f0;
+  --fg-dim: rgba(243, 245, 240, 0.62);
+  --line: rgba(243, 245, 240, 0.14);
+  --accent: #d9cdb3;
+  --card-bg: rgba(243, 245, 240, 0.035);
+  --card-line: rgba(243, 245, 240, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, "Segoe UI", Inter, sans-serif;
+  line-height: 1.55;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+.eyebrow {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.btn {
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.65rem 1.25rem;
+  border-radius: 2px;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--fg);
+}
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-solid {
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+.btn-solid:hover {
+  filter: brightness(1.08);
+  color: var(--ink);
+}
+.btn-wpp {
+  background: #1c3b2c;
+  color: #e8f0e4;
+  border-color: #2c4d3a;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-line);
+}
+
+.chip {
+  font-family: ui-monospace, monospace;
+  font-size: 0.7rem;
+  border: 1px solid var(--card-line);
+  padding: 0.35rem 0.75rem;
+  color: var(--fg-dim);
+  border-radius: 2px;
+}
