@@ -4,6 +4,7 @@ export type ServiceTier = {
   title: string;
   items: string;
   featured: boolean;
+  image_url: string | null;
   sort_order: number;
 };
 
