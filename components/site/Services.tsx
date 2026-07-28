@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ServiceTier, LegislationItem } from "@/lib/types";
 
 export default function Services({
@@ -21,30 +22,37 @@ export default function Services({
           {services.map((s) => (
             <div
               key={s.id}
-              className="card p-7 flex flex-col gap-4"
+              className="card overflow-hidden flex flex-col"
               style={
                 s.featured
                   ? { borderColor: "var(--accent)", background: "linear-gradient(160deg, rgba(59,74,52,.16), rgba(14,39,51,.24))" }
                   : undefined
               }
             >
-              <span className="font-mono text-[0.66rem] tracking-widest" style={{ color: "var(--accent)" }}>
-                {s.tier}
-              </span>
-              <h3 className="font-display font-semibold text-[1.2rem]">{s.title}</h3>
-              <ul className="flex flex-col gap-2">
-                {s.items.split("\n").filter(Boolean).map((it, idx) => (
-                  <li key={idx} className="text-[0.84rem] pl-4 relative" style={{ color: "var(--fg-dim)" }}>
-                    <span className="absolute left-0" style={{ color: "var(--accent)" }}>
-                      —
-                    </span>
-                    {it}
-                  </li>
-                ))}
-              </ul>
-              <a href="#contato" className={"btn mt-auto self-start" + (s.featured ? " btn-solid" : "")}>
-                Solicitar proposta
-              </a>
+              {s.image_url && (
+                <div className="relative w-full aspect-[16/9]">
+                  <Image src={s.image_url} alt={s.title} fill style={{ objectFit: "cover" }} />
+                </div>
+              )}
+              <div className="p-7 flex flex-col gap-4">
+                <span className="font-mono text-[0.66rem] tracking-widest" style={{ color: "var(--accent)" }}>
+                  {s.tier}
+                </span>
+                <h3 className="font-display font-semibold text-[1.2rem]">{s.title}</h3>
+                <ul className="flex flex-col gap-2">
+                  {s.items.split("\n").filter(Boolean).map((it, idx) => (
+                    <li key={idx} className="text-[0.84rem] pl-4 relative" style={{ color: "var(--fg-dim)" }}>
+                      <span className="absolute left-0" style={{ color: "var(--accent)" }}>
+                        —
+                      </span>
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contato" className={"btn mt-auto self-start" + (s.featured ? " btn-solid" : "")}>
+                  Solicitar proposta
+                </a>
+              </div>
             </div>
           ))}
         </div>
