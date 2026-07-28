@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { Project } from "@/lib/types";
 
 const CATS = ["Todos", "Engenharia", "Consultoria", "Segurança", "Tecnologia"];
@@ -40,10 +41,16 @@ export default function Portfolio({ projects }: { projects: Project[] }) {
           {filtered.map((p) => (
             <div key={p.id} className="card overflow-hidden">
               <div
-                className="aspect-[4/3] flex items-end p-4"
+                className="relative aspect-[4/3] flex items-end p-4"
                 style={{ background: "linear-gradient(135deg, var(--olive-deep), var(--petrol))" }}
               >
-                <span className="font-mono text-[0.62rem]" style={{ color: "rgba(243,245,240,.8)" }}>
+                {p.image_url && (
+                  <Image src={p.image_url} alt={p.title} fill style={{ objectFit: "cover" }} />
+                )}
+                <span
+                  className="relative font-mono text-[0.62rem]"
+                  style={{ color: "rgba(243,245,240,.8)" }}
+                >
                   {p.code}
                 </span>
               </div>
