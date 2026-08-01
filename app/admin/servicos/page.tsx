@@ -10,24 +10,31 @@ export default async function AdminServicesPage() {
   const services = (data ?? []) as ServiceTier[];
 
   return (
-    <CrudTable
-      table="services"
-      title="Serviços (tiers)"
-      addLabel="+ Novo tier"
-      items={services}
-      emptyRow={{ tier: "", title: "", items: "", featured: false, sort_order: services.length + 1 }}
-      fields={[
-        { key: "tier", label: "Rótulo (ex: TIER 01)" },
-        { key: "title", label: "Nome do plano" },
-        { key: "items", label: "Itens inclusos (um por linha)", type: "textarea" },
-        { key: "featured", label: "Destacar este plano?", type: "checkbox" },
-      ]}
-      renderPreview={(s) => (
-        <>
-          <b className="block">{s.title}</b>
-          <span style={{ color: "var(--fg-dim)" }}>{s.tier}</span>
-        </>
-      )}
-    />
+    <div>
+      <p className="text-[0.84rem] mb-6" style={{ color: "var(--fg-dim)" }}>
+        Para adicionar uma foto, envie o arquivo em Supabase → Storage → bucket <code>media</code>{" "}
+        e cole a URL pública gerada no campo &quot;URL da imagem&quot;.
+      </p>
+      <CrudTable
+        table="services"
+        title="Serviços (tiers)"
+        addLabel="+ Novo tier"
+        items={services}
+        emptyRow={{ tier: "", title: "", items: "", featured: false, image_url: "", sort_order: services.length + 1 }}
+        fields={[
+          { key: "tier", label: "Rótulo (ex: TIER 01)" },
+          { key: "title", label: "Nome do plano" },
+          { key: "items", label: "Itens inclusos (um por linha)", type: "textarea" },
+          { key: "featured", label: "Destacar este plano?", type: "checkbox" },
+          { key: "image_url", label: "URL da imagem" },
+        ]}
+        renderPreview={(s) => (
+          <>
+            <b className="block">{s.title}</b>
+            <span style={{ color: "var(--fg-dim)" }}>{s.tier}</span>
+          </>
+        )}
+      />
+    </div>
   );
 }
