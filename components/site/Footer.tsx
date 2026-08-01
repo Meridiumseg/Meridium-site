@@ -15,9 +15,9 @@ export default function Footer({ contact }: { contact: ContactInfo }) {
                 <Image src="/logo.png" alt="" width={26} height={26} />
                 <span className="font-display font-semibold text-[1.15rem]">MERIDIUM</span>
               </div>
-              <p className="max-w-[30ch] text-[0.85rem]" style={{ color: "var(--fg-dim)" }}>
-                Engenharia · Consultoria · Perícias · Tecnologia aplicadas à segurança do trabalho
-                em Rondônia.
+              <p className="max-w-[32ch] text-[0.85rem]" style={{ color: "var(--fg-dim)" }}>
+                Inteligência Técnica Aplicada — integrando engenharia, segurança do trabalho,
+                eletrotécnica, perícias, BI e educação corporativa em Rondônia e Mato Grosso.
               </p>
             </div>
             <div>
@@ -25,7 +25,7 @@ export default function Footer({ contact }: { contact: ContactInfo }) {
                 Empresa
               </h5>
               <a href="#sobre" className="block text-[0.85rem] mb-2" style={{ color: "var(--fg-dim)" }}>Sobre nós</a>
-              <a href="#servicos" className="block text-[0.85rem] mb-2" style={{ color: "var(--fg-dim)" }}>Serviços</a>
+              <a href="#atuacao" className="block text-[0.85rem] mb-2" style={{ color: "var(--fg-dim)" }}>Soluções</a>
               <a href="#portfolio" className="block text-[0.85rem] mb-2" style={{ color: "var(--fg-dim)" }}>Portfólio</a>
               <a href="#equipe" className="block text-[0.85rem] mb-2" style={{ color: "var(--fg-dim)" }}>Equipe</a>
             </div>

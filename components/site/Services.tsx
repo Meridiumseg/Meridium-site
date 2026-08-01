@@ -12,7 +12,7 @@ export default function Services({
     <section id="servicos" className="py-20 border-b" style={{ borderColor: "var(--line)", background: "var(--bg-2)" }}>
       <div className="max-w-[1180px] mx-auto px-[5vw]">
         <div className="max-w-[620px] mb-10">
-          <div className="eyebrow">Serviços</div>
+          <div className="eyebrow">Modelos de atendimento</div>
           <h2 className="font-display font-semibold" style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)" }}>
             Modelos de atendimento sob medida para cada estágio de maturidade.
           </h2>

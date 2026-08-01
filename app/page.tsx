@@ -1,12 +1,22 @@
 import { createClient } from "@/lib/supabase/server";
 import Header from "@/components/site/Header";
 import Hero from "@/components/site/Hero";
+import ImpactSection from "@/components/site/ImpactSection";
+import Manifesto from "@/components/site/Manifesto";
 import About from "@/components/site/About";
+import Diferencial from "@/components/site/Diferencial";
+import AreasAtuacao from "@/components/site/AreasAtuacao";
+import Method from "@/components/site/Method";
+import Segmentos from "@/components/site/Segmentos";
+import PorQueEscolher from "@/components/site/PorQueEscolher";
 import Services from "@/components/site/Services";
 import Portfolio from "@/components/site/Portfolio";
 import News from "@/components/site/News";
 import Legislation from "@/components/site/Legislation";
 import Team from "@/components/site/Team";
+import Roadmap from "@/components/site/Roadmap";
+import FAQ from "@/components/site/FAQ";
+import CTABanner from "@/components/site/CTABanner";
 import Contact from "@/components/site/Contact";
 import Footer from "@/components/site/Footer";
 import type {
@@ -54,12 +64,22 @@ export default async function HomePage() {
     <>
       <Header contact={contact} />
       <Hero />
+      <ImpactSection />
+      <Manifesto />
       <About lead={team[0] ?? null} />
+      <Diferencial />
+      <AreasAtuacao />
+      <Method />
+      <Segmentos />
+      <PorQueEscolher />
       <Services services={services} legislation={legislation} />
       <Portfolio projects={projects} />
       <News news={news} />
       <Legislation legislation={legislation} />
       <Team team={team} />
+      <Roadmap />
+      <FAQ />
+      <CTABanner />
       <Contact contact={contact} />
       <Footer contact={contact} />
     </>

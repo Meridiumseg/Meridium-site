@@ -12,21 +12,21 @@ export default function Hero() {
       <div className="max-w-[1180px] mx-auto px-[5vw] grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
         <div>
           <Image src="/logo.png" alt="" width={56} height={56} className="mb-6" />
+          <div className="eyebrow">Segurança · Engenharia · Inteligência · Tecnologia</div>
           <h1 className="font-display font-semibold leading-tight mb-5" style={{ fontSize: "clamp(2.1rem, 4.4vw, 3.4rem)" }}>
-            Precisão técnica para operações que{" "}
+            Inteligência Técnica para{" "}
             <em className="not-italic italic" style={{ color: "var(--accent)" }}>
-              não podem parar
+              empresas que buscam excelência
             </em>
             .
           </h1>
-          <p className="max-w-[44ch] mb-8" style={{ color: "var(--fg-dim)" }}>
-            Engenharia, consultoria, perícias e tecnologia aplicadas à segurança do trabalho — da
-            adequação às Normas Regulamentadoras à gestão de risco em campo.
+          <p className="max-w-[46ch] mb-8" style={{ color: "var(--fg-dim)" }}>
+            A MERIDIUM integra consultoria, engenharia, gestão de riscos, perícias e
+            inteligência de dados para transformar desafios técnicos em decisões estratégicas.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="#servicos" className="btn btn-solid">Conheça nossos serviços</a>
-            <a href="#portfolio" className="btn">Conheça nosso portfólio</a>
-            <a href="#contato" className="btn">Agendar atendimento</a>
+            <a href="#contato" className="btn btn-solid">Solicite um Diagnóstico Técnico</a>
+            <a href="#metodo" className="btn">Conheça nosso método</a>
           </div>
         </div>
         <div

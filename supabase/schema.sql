@@ -12,6 +12,7 @@ create table if not exists services (
   title text not null,
   items text not null default '',      -- itens separados por quebra de linha
   featured boolean not null default false,
+  image_url text,
   sort_order int not null default 0,
   created_at timestamptz not null default now()
 );
