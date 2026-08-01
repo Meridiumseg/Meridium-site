@@ -1,5 +1,6 @@
 export type DivisionCategory = {
   name: string;
+  badge?: string;
   items: string[];
 };
 
@@ -56,7 +57,25 @@ export default function DivisionTemplate({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {categories.map((c) => (
               <div key={c.name} className="card p-6">
-                <h5 className="font-display font-semibold text-[1rem] mb-3">{c.name}</h5>
+                <div className="flex items-center gap-2 mb-3">
+                  {c.badge && (
+                    <span
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: "50%",
+                        background: "var(--accent)",
+                        display: "inline-block",
+                      }}
+                    />
+                  )}
+                  <h5 className="font-display font-semibold text-[1rem]">{c.name}</h5>
+                  {c.badge && (
+                    <span className="font-mono text-[0.62rem] tracking-widest" style={{ color: "var(--accent)" }}>
+                      {c.badge.toUpperCase()}
+                    </span>
+                  )}
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {c.items.map((it) => (
                     <span key={it} className="chip">{it}</span>
