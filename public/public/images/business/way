@@ -1,0 +1,14 @@
+public
+│
+└── images
+    │
+    └── business
+        │
+        ├── academy.webp
+        ├── analytics.webp
+        ├── automation.webp
+        ├── electrical.webp
+        ├── engineering.webp
+        ├── expert.webp
+        ├── fire.webp
+        └── safety.webp
